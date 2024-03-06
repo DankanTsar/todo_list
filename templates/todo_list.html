@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load todo_item from todo_item %}
+{% block title %}Все задачи{% endblock %}
+{% block content %}
+    <div class="container mt-4">
+        <a href="{% url 'addtodo' %}" class="btn btn-primary">Добавить новую задачу</a>
+        <ul class="list-group mt-4">
+            {% for todo in object_list %}
+                    {% todo_item todo %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

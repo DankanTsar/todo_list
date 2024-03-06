@@ -1,0 +1,10 @@
+<li class="list-unstyled border p-3 mb-2 rounded bg-light shadow-sm">
+    <h6 class="text-primary">{{ todo.title }}</h6>
+    <p>{{ todo.description }}</p>
+    <small class="text-muted">{{ todo.created_at }}</small>
+    <br>
+    <div class="btn-group mt-2" role="group">
+        <a href="{% url 'updatetodo' pk=todo.id %}" class="btn btn-warning">Изменить</a>
+        <a href="{% url 'deletetodo' pk=todo.id %}" class="btn btn-danger">Удалить</a>
+    </div>
+</li>
